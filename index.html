@@ -13,6 +13,9 @@
         <div class="hand min-hand"></div>
         <div class="hand second-hand"></div>
         <div class="centerBlock"></div>
+        <div class="numeric">
+          <div class="twelve"></div>
+        </div>
       </div>
     </div>
 
@@ -88,6 +91,23 @@
       background-color: black;
     }
 
+
+    .numeric{
+      width: 50%;
+      height: 5px;
+      /* background-color: red; */
+      transform-origin: 100%;
+      transform: rotate(30deg);
+      position: relative;
+      bottom: 0;
+    }
+
+    .twelve{
+      width: 20%;
+      height: 5px;
+      background-color: yellow;
+    }
+
   </style>
 
   <script>
@@ -112,11 +132,7 @@
 
       secondHand.style.transform = `rotate(${secondDeg}deg)`;
       minHand.style.transform = `rotate(${minDeg}deg)`;
-      hourHand.style.transform = `rotate(${hourDeg}deg)`;
-      
-      console.log(seconds);
-
-      
+      hourHand.style.transform = `rotate(${hourDeg}deg)`;    
 
     }
 
